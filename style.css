@@ -1,95 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-* {
+*{
     margin: 0;
-    padding: 0%;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Space Mono", monospace;
 }
 
-:root {
+:root{
     font-size: 62.5%;
 
-    --jagged-ice: #c5e4e7;
-    --white: #fff;
-    --greyish-turquose: #5e7a7d;
-    --squeeze: #f3f9fa;
-    --sherpa-blue: #00474b;
-    --beetle-gree: #547878;
-    --topaz: #26c2ae;
-    --regent-grey: #7f9d9f;
-    --water-leaf: #9fe8df;
+    --jagged-ice: #C5E4E7;
+    --white: #FFF;
+    --greyish-turquoise: #5E7A7D;
+    --black-squeeze: #F3F9FA;
+    --sherpa-blue: #00474B;
+    --beetle-green: #547878;
+    --topaz: #26C2AE;
+    --regent-grey: #7F9D9F;
+    --water-leaf: #9FE8DF;
 }
 
-body {
+body{
     font-size: 1.6rem;
-    background-color: var(--jagged-ice);
+    background: var(--jagged-ice);
 }
 
-header {
+header{
     padding-top: 5rem;
     padding-bottom: 4rem;
 
-    display: flex;
+    display:flex;
     justify-content: center;
 }
 
-main {
+main{
     background-color: var(--white);
     border-radius: 2.5rem 2.5rem 0 0;
     padding: 3.2rem 2.4rem;
 }
 
-
-.info {
+.info{
     padding-inline: .8rem;
 
-    strong {
-        color: var(--greyish-turquose);
-        display: block;
-        margin-bottom: .6rem;
+    strong{
+    color: var(--greyish-turquoise);
+    display: block;
+    margin-bottom: .6rem;
     }
 
-    div{
-        margin-bottom: 3.2rem;
-    }
+div{
+    margin-bottom: 3.2rem;
+}
 
 
     .input-box{
-        background-color: var(--squeeze);
-        padding: .6rem 1.8rem;
+        background: var(--black-squeeze);
+        padding: .6rem;
         border-radius: .5rem;
         display: flex;
         align-items: center;
-
-        input {
+    
+        input{
             background: transparent;
             border: none;
             text-align: right;
             width: 100%;
             outline: none;
             font-size: 2.4rem;
-            font-weight:700;
+            font-weight: 700;
             color: var(--sherpa-blue);
         }
-
-        input::placeholder {
+    
+        input::placeholder{
             color: var(--sherpa-blue);
             opacity: 0.35;
         }
     }
 
-    .input-box:has(input:focus) {
-        outline: 2px solid var(--topaz);
-    }
+.input-box:has(input:focus){
+    outline: 2px solid var(--topaz);
+}
 
-    .tip > div {
+
+    .tip > div{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.6rem;
         margin-top: 1rem;
 
-        button {
+        button{
             border: none;
             background: var(--sherpa-blue);
             color: var(--white);
@@ -99,37 +98,38 @@ main {
             font-weight: 700;
         }
 
-        button:houver {
+        button:hover{
             background: var(--water-leaf);
             cursor: pointer;
             transition: .3s;
         }
 
-        .button selected {
+        .button-selected{
             background: var(--topaz);
         }
 
-        input {
+        input{
             width: 100%;
-            background: var(--squeeze);
+            background: var(--black-squeeze);
             font-size: 2.4rem;
             text-align: center;
             border: none;
             border-radius: .5rem;
             outline: none;
-           font-weight: 700;
+            font-weight: 700;
             color: var(--sherpa-blue);
 
-            &::placeholder {
-                color: var(--beetle-gree);
+
+            &::placeholder{
+                color: var(--beetle-green);
             }
 
             &:focus{
                 outline: 2px solid var(--topaz);
             }
         }
-    }
 
+    }
 }
 
 .results{
@@ -138,13 +138,13 @@ main {
     padding: 4rem 2.4rem 2.4rem;
 
     .amount,
-    .total {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2.4rem;
+    .total{
+       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2.4rem;
 
-        p {
+        p{
             color: var(--white);
             font-weight: 700;
 
@@ -154,67 +154,67 @@ main {
             }
         }
 
-        strong {
-            color: var(--topaz);
-            font: size 3.2rem;
+        strong{
+        color: var(--topaz);
+        font-size: 3.2rem;
         }
-    
-    }
+  }
 
-    button {
-        width: 100%;
-        font-size: 2.4rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        background: var(--topaz);
-        color: var(--sherpa-blue);
-        border: none;
-        padding-block: .9rem;
-        border-radius: .5rem;
-    }
-
-    buton:hover {
-        background: var(--water-leaf);
-        cursor: pointer;
-        transition: .3s;
-    }
+  button{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--topaz);
+    color: var(--sherpa-blue);
+    border: none;
+    padding-block: .9rem;
+    border-radius: .5rem;
+}
+  button:hover{
+    background: var(--water-leaf);
+    cursor: pointer;
+    transition: .3s;
+  }
 }
 
 input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
+input::-webkit-inner-spin-button{
     display: none;
 }
 
-@media(min-width: 920px) {
-    header {
-        margin-top: 5rem;
-    }
-    main {
+@media(min-width: 920px){
+   header{
+    margin-top: 5rem;
+   }
+   
+    main{
         display: flex;
-        max-width: 92rem;
-        margin-inline: auto;
-        border-radius: 2.5rem;
-        padding: 4.8rem;
-        gap: 4.8rem;
+       max-width: 92rem;
+       margin-inline: auto;
+       border-radius: 2.5rem;
+       padding: 4.8rem;
+       gap: 4.8rem;
 
-        section {
+        section{
             width: 100%;
         }
-        .info .tip div {
+
+       .info .tip div{
             grid-template-columns: repeat(3, 1fr);
-
         }
+.results{
+padding: 4rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 
-        .results {
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+    .amount strong,
+    .total strong{
+        font-size: 4.8rem;
+    }
 
-            .amount strong,
-            .total strong {
-                font-size: 4.8rem;
-            }
-        }
+}
+
     }
 }
